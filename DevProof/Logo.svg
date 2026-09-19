@@ -5,7 +5,7 @@ fill="none" stroke="red" stroke-width="2"/>
 
 <polyline points="26,20 15,25 26,30" stroke="purple" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 
-<line x1="31" y1="17" x2="28" y2="34" stroke="purple" stroke-width="2" stroke-linecap="round" />
+<line x1="32" y1="17" x2="28" y2="34" stroke="purple" stroke-width="2" stroke-linecap="round" />
 
 <polyline points="34,20 45,25 34,30" stroke="purple" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
