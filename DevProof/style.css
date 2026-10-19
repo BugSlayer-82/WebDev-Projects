@@ -15,27 +15,30 @@ html {
 body {
     margin: 0;
     height: 1000vh;
-    background-color: rgb(14, 15, 14);
+    background-color: rgb(226, 236, 226);
 }
 
 header {
     display: flex;
+    width: 100%;
+    background: red;
     justify-content: center;
-    min-width: 80%;
 }
 
 div.wrapper-header {
     top: 0;
-    /* left: 0; */
-    height: 6rem;
+    left: 0;
+    z-index: 10;
+    height: 7rem;
     display: flex;
-    z-index: 1000;
-    position: fixed;
+    width: 95rem;
+    position: sticky;
+    max-width: 144rem; /* Change it later */
     align-items: center;
-    padding-inline: 1rem;
+    padding-inline: 5rem;
     background: var(--back-color);
     justify-content: space-between;
-    min-width: calc((900 / 1440) * 100%);
+    /* min-width: calc((300 / 900) * 100%); */
     border-bottom: 1px solid rgba(33, 39, 67, 0.998);
 }
 
@@ -123,6 +126,10 @@ div.other {
     padding: 0.8rem 6.2rem 0.8rem 3rem;
     box-shadow: 0 0 2px 2px #f2f2f230;
 }
+
+/* .input-search>input::placeholder{
+    padding: 1rem 0;
+} */
 
 .input-search::before {
     bottom: 0.4rem;
