@@ -2,15 +2,10 @@
     box-sizing: border-box;
 }
 
-/* 
-:root {
-    --back-color: blue;
-    --fsize: 2.5rem;
-    } */
-    html {
-        font-size: 10px;
-    }
-    
+html {
+    font-size: 10px;
+}
+
 body {
     margin: 0;
     background: grey;
@@ -21,7 +16,8 @@ header {
     left: 0;
     width: 100%;
     position: relative;
-    background-color: rgb(23, 19, 19); /* chage it later */
+    background-color: rgb(23, 19, 19);
+    /* chage it later */
 }
 
 .wrapper-header {
@@ -36,37 +32,55 @@ header {
     margin-inline: auto;
     padding-inline: 2rem;
     justify-content: space-between;
-    background: rgb(109, 109, 112); /* chage it later */
+    background: rgb(109, 109, 112);
+    /* chage it later */
 }
 
 .logo-section {
+    gap: 0.6rem;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    justify-content: space-between;
+    justify-content: center;
+    background-color: beige;
 }
 
-.logo-icon{
+.logo-icon {
     width: 2.5rem;
     height: 2.5rem;
     /* background-color: rgb(248, 248, 255); */
 }
-.logo-section:nth-child(1){
+
+.logo-section:nth-child(1) {
     color: black;
     font-size: 2rem;
 }
 
-/* 
-.logo-section:nth-child(1){
-    background-color: blueviolet;
-    width: 4rem;
-}
 .navigation{
     display: flex;
     align-items: center;
     background: rgb(225, 216, 216); 
     justify-content:center;
-} */
+} 
+
+.navigation ul{
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    justify-content: center;
+}
+
+
+ul li a{
+    gap: 3em;
+    display: block;
+    font-size: medium;
+    text-decoration: none;
+}
+
+.other{
+    display: none;
+}
 
 .input-search {
     display: none;
