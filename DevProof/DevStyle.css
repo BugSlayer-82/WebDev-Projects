@@ -2,21 +2,29 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: "Myfont1";
+    src: url("./assets/rosario/variable/rosario-latin-wght-normal.woff2");
+}
+@font-face{
+    font-family: "Myfont2";
+    src: url("./assets/playfair-display/variable/playfair-display-latin-wght-normal.woff2");
+}
+
 html {
     font-size: 10px;
 }
-
 :root {
     --bor-color: 0.2rem solid rgba(60, 60, 60, 0.5);
+    --back-color: rgb(6, 6, 20);
 }
 
 body {
     margin: 0;
-    background: black;
+    background: var(--back-color); 
 }
 
 /* Header Section */
-
 header {
     top: 0;
     left: 0;
@@ -35,10 +43,8 @@ header {
     min-height: 6rem;
     align-items: center;
     margin-inline: auto;
-    padding-inline: 2rem;
+    padding-inline: 3rem;
     justify-content: space-between;
-    /* justify-content: space-around; */
-    /* border-bottom: 0.2rem solid rgba(60, 60, 60, 0.5); */
     border-bottom: var(--bor-color);
 }
 
@@ -88,7 +94,7 @@ header {
 ul li a {
     color: white;
     display: block;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     white-space: nowrap;
     text-decoration: none;
     border: 2px solid transparent;
@@ -177,121 +183,117 @@ a:hover {
 }
 
 /* Main Seciton */
-/* Change it later */
 main {
     width: 100%;
     display: flex;
+    min-width: 95rem;
     flex-direction: column;
     justify-content: center;
+    /* min-height: 100vh; */
 }
 
-.main-1 {
+section.main-1 {
     display: flex;
-    /* min-width: 95rem; */
-    min-width: 100%;
+    width: inherit;
     position: relative;
+    align-items: baseline;
     justify-content: center;
-    background: rgb(6, 6, 20);
+    /* background: rgb(6, 6, 20); */
 }
 
 .part-1 {
-    width: 55%;
+    width: 50%;
     display: flex;
-    height: max-content;
-    /* change it later */
     flex-direction: column;
-    padding-block-end: 2rem;
-    background: transparent;
-}
-
-.twoBox {
-    display: block;
-}
-
-.part-1>:first-child {
-    position: relative;
-    padding-block-end: 1rem;
-    padding-block-start: 4rem;
     padding-inline-start: 3rem;
 }
 
-.part-1 .twoBox>:first-child {
+.twoBox {
+    display: inline-block;
+    padding-block-end: 1rem;
+    padding-block-start: 4rem;
+}
+
+
+.twoBox>:first-child {
+    font-family: "Myfont1";
     color: white;
+    font-size:  1.2rem;
     position: relative;
-    border-radius: 1rem;
+    border-radius: 1.5rem;
     background: rgb(60, 62, 62);
-    padding: 0.25rem 0.5rem 0.25rem 1.4rem;
+    border: 0.2rem solid currentColor;
+    padding: 0.3rem 1rem 0.3rem 1.4rem;
 }
 
-.part-1 .twoBox>:first-child::before {
+.twoBox>:first-child::before {
     top: 0;
-    content: ".";
+    /* content: url("./assets/SvgIcons/BoldDot.svg"); */
+    content: '&';
     left: 0.6rem;
     position: absolute;
     font-weight: bolder;
 
 }
 
-.part-1 .twoBox>:last-child {
+/* .bold path{
+    width: 2.5rem;
+    height: 2.5rem;
+} */
+
+.twoBox>:last-child {
     left: 2rem;
+    font-size: 1.2rem;
     position: relative;
-    border-radius: 1rem;
+    padding: 0.3rem 1rem;
+    border-radius: 1.5rem;
+    font-family: "Myfont";
     color: rgb(24, 255, 24);
-    background: rgba(85, 131, 85, 0.314);
-    padding: 0.25rem 0.5rem 0.25rem 1.4rem;
-}
-
-.part-1 .twoBox>:last-child::before {
-    top: 0;
-    content: ".";
-    left: 0.6rem;
-    position: absolute;
-    font-weight: bolder;
-
+    border : 0.2rem solid currentColor;
+    background: rgba(40, 202, 40, 0.177);
 }
 
 h1 {
-    left: 3rem;
-    padding: 0;
     color: white;
-    max-width: 60%;
-    font-size: 2.4rem;
+    max-width: 80%;
+    font-size: 4rem;
     position: relative;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Myfont2";
 }
 
 
 .para {
-    left: 3rem;
     position: relative;
-    max-width: calc(100% - 35%);
+    max-width: 75%;
 }
 
 .para>:first-child {
     color: white;
     line-height: 2rem;
-    font-size: 1.6rem;
+    font-size: 1.7rem;
 }
 
 .para>:last-child {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     color: rgb(234, 234, 234);
 }
 
 .twoButton {
-    gap: 3rem;
-    left: 3rem;
+    gap: 2rem;
     display: flex;
-    max-width: 50%;
+    max-width: 70%;
+    flex-wrap: wrap;
     position: relative;
+    padding-block: 3rem;
     justify-content: flex-start;
 }
 
 .twoButton>button {
+    cursor: pointer;
     color: white;
     font-size: 1.2rem;
     border-radius: 1rem;
-    padding: 0.7rem 2rem;
+    padding: 1rem 2rem;
     background: rgb(68, 20, 178);
     border: 0.1rem solid transparent;
 }
@@ -311,9 +313,8 @@ h1 {
 }
 
 /* Start from here */
-
 .part-2 {
-    width: 45%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     background: transparent;
@@ -343,18 +344,40 @@ h1 {
 }
 
 /* start from here  */
-.main-2 {
+section.main-2 {
     display: flex;
-    min-width: 90%;
-    /* max-width: 100%; */
-    /* min-width: 95rem; */
-    background-color: blue;
+    width: inherit;
+    align-items: center;
+    justify-content: center;
 }
 
 .boxes{
-    max-width: 90%;
-    height: 8rem;
+    min-width: 98%;
 }
-main>h3{
-    color: white;
+.boxes ul{
+    color: rgb(241, 241, 241);
+    list-style-type: none;
+    border-radius: 0.8rem;
+    border: 0.2rem solid rgba(153, 151, 151, 0.741);
+    display: flex;
+    justify-content: center;
+}
+
+.skills
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skill-content
+{
+    display: flex;
+    flex-direction: column;
+}
+section.main-3{
+    display: none;
+    width: inherit;
+    background: red;
+    align-items: center;
+    justify-content: center;
 }
